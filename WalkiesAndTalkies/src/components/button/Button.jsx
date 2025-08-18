@@ -13,7 +13,7 @@ function Button({children}) {
     disabled={isDisabled} 
     onClick={handleClick}
 >
-    hej
+    {children}
 </button>
 )
 }
