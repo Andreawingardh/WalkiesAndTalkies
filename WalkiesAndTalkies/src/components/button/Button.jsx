@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Button.module.css'
 
 function Button() { 
-    return <button className={styles.button}>knapp</button>;
+    const [isDisabled, setIsDisabled] = useState(false);
+
+    const handleClick = () => {
+        setIsDisabled(true);
+
+    return (
+    <button 
+    className={styles.button} 
+    disabled={isDisabled} 
+    onClick={handleClick}
+>
+    knapp
+</button>
+)
+}
 }
 
 export default Button;
