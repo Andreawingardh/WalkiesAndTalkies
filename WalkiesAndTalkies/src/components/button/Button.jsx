@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
 import styles from './Button.module.css'
 
-function Button() { 
+function Button({children}) { 
     const [isDisabled, setIsDisabled] = useState(false);
 
     const handleClick = () => {
         setIsDisabled(true);
-
+    }
     return (
     <button 
     className={styles.button} 
     disabled={isDisabled} 
     onClick={handleClick}
 >
-    knapp
+    hej
 </button>
 )
 }
-}
+
 
 export default Button;
