@@ -1,6 +1,12 @@
-.normal {
+.cloud {
     background-color: blue;
-    height: 1000px;
-    width: 300px;
-    color: white;
+    position: relative;
+}
+
+.seagull {
+    position: absolute;
+    top: 14%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 70px;
 }
