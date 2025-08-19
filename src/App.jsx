@@ -15,13 +15,7 @@ function App() {
     <>
 
       <CategoryBox/>
-    <StartPage/>
-      {/* <CategoryBox/>
-      <Button>Question</Button>
-      <Button>Location</Button>
-      <LocationCard></LocationCard>
-      <ActivityCard></ActivityCard>
-      <MapsButton />   
+    <StartPage/>  
       </>
   )
 }
