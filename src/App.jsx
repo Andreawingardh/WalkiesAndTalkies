@@ -4,7 +4,7 @@ import ActivityCard from './components/ActivityCard/ActivityCard';
 import activites from './data/activities'
 import locations from './data/locations'
 import MapsButton from './components/maps_button/MapsButton';
-import Button from './components/button/Button';
+import Button from './components/Button/Button';
 
 
 function App() {
@@ -12,14 +12,13 @@ function App() {
 
   return (
     <>
-      <Button>Question</Button>
-      <Button>Location
-      </Button>
-      <LocationCard name={locations[0].name} description={locations[0].description}></LocationCard>
-      <ActivityCard question={activites[0].question}></ActivityCard>
+      {/* <Button>Question</Button>
+      <Button>Location</Button> */}
+      <LocationCard></LocationCard>
+      <ActivityCard></ActivityCard>
       <MapsButton />
       </>
   )
 }
 
-export default App
+export default App;
