@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+      <CategoryBox/>
     <StartPage/>
       {/* <CategoryBox/>
       <Button>Question</Button>
