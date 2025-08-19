@@ -12,15 +12,15 @@ function App() {
 
   return (
     <>
+
       <CategoryBox/>
       <Button>Question</Button>
-      <Button>Location
-      </Button>
-      <LocationCard name={locations[0].name} description={locations[0].description}></LocationCard>
-      <ActivityCard question={activites[0].question}></ActivityCard>
+      <Button>Location</Button>
+      <LocationCard></LocationCard>
+      <ActivityCard></ActivityCard>
       <MapsButton />
       </>
   )
 }
 
-export default App
+export default App;
