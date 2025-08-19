@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
 import styles from './Button.module.css'
 
-function Button({children}) { 
+function Button({children, ...props}) { 
     const [isDisabled, setIsDisabled] = useState(false);
 
-    const handleClick = () => {
-        setIsDisabled(true);
-    }
     return (
     <button 
     className={styles.button} 
     disabled={isDisabled} 
-    onClick={handleClick}
+    {...props}
 >
     {children}
 </button>
