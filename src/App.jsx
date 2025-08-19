@@ -12,13 +12,7 @@ function App() {
 
   return (
     <>
-
       <CategoryBox/>
-      <Button>Question</Button>
-      <Button>Location</Button>
-      <LocationCard></LocationCard>
-      <ActivityCard></ActivityCard>
-      <MapsButton />
       </>
   )
 }
