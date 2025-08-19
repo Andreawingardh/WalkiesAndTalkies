@@ -6,19 +6,20 @@ import locations from './data/locations'
 import MapsButton from './components/maps_button/MapsButton';
 import Button from './components/Button/Button';
 import CategoryBox from './components/Category/CategoryBox';
+import StartPage from './components/StartPage/StartPage';
 
 function App() {
  
 
   return (
     <>
-
-      <CategoryBox/>
+    <StartPage/>
+      {/* <CategoryBox/>
       <Button>Question</Button>
       <Button>Location</Button>
       <LocationCard></LocationCard>
       <ActivityCard></ActivityCard>
-      <MapsButton />
+      <MapsButton />  */}
       </>
   )
 }
