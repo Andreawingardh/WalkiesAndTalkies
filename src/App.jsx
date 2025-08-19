@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+
       <CategoryBox/>
     <StartPage/>
       {/* <CategoryBox/>
@@ -20,7 +21,7 @@ function App() {
       <Button>Location</Button>
       <LocationCard></LocationCard>
       <ActivityCard></ActivityCard>
-      <MapsButton />  */}
+      <MapsButton />   
       </>
   )
 }
