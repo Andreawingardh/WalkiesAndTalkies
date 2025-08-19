@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import styles from "./ActivityCard.module.css";
 import Button from '../Button/Button';
 import activities from '../../data/activities';
-import Cloud from "../../assets/images/Cloud.svg";
+import CloudActivity from "../../assets/images/Cloud-activity.svg";
 import Seagull from "../../assets/images/Seagull.png";
+import Refresh from "../../assets/images/refresh.svg";
 
 function ActivityCard({ question, ...props }) {
 const [currentActivity, setCurrentActivity] = useState("");
@@ -23,13 +24,17 @@ const [disabledButton, setDisabledButton] = useState(false)
   }
 
   return (
-    <div>
-    <img className={styles.cloud} src={Cloud} {...props}/>
-    <img className={styles.seagull} src={Seagull}/>
-      <h1>Question</h1>
+    <div className={styles.cloudWrapper}>
+
+
+    <img className={styles.cloud} src={CloudActivity} {...props}/>
+      <div className={styles.textbox}>
       <p>{question}</p>
       <p>{!disabledButton ? currentActivity : "tyvärr slut på frågor"}</p>
-      <Button onClick={getRandomActivity} disabled={disabledButton}>Frågor</Button> 
+      </div>
+      <Button className={styles.button} onClick={getRandomActivity} disabled={disabledButton}>
+        <img className={styles.refresh} src={Refresh}/>
+      </Button> 
     </div>
   );
 }

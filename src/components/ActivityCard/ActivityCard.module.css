@@ -1,12 +1,37 @@
 .cloud {
-    background-color: blue;
     position: relative;
 }
 
-.seagull {
+.textbox {
     position: absolute;
-    top: 14%;
-    left: 30%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    top: 54%;
+    left:50%;
     transform: translate(-50%, -50%);
-    width: 70px;
+    color: black;
+}
+
+.cloudWrapper {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 60px;
+    background-color: lightskyblue;
+    position: absolute;
+    top:65%;
+    left:70%;
+}
+
+.refresh {
+    width: auto;
+    padding:0px;
+}
+
+p {
+
 }

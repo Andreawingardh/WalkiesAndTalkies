@@ -13,13 +13,13 @@ function App() {
 
   return (
     <>
-    <StartPage/>
-      {/* <CategoryBox/>
+
+      <CategoryBox/>
       <Button>Question</Button>
       <Button>Location</Button>
-      <LocationCard></LocationCard> */}
-      {/* <ActivityCard></ActivityCard> */}
-      {/* <MapsButton />   */}
+      <LocationCard></LocationCard>
+      <ActivityCard></ActivityCard>
+      <MapsButton />   
       </>
   )
 }
