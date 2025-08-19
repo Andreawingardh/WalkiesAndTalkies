@@ -8,7 +8,7 @@ function MapsButton({origin = "Lindholmen", destination = "Gothenburg Central St
         <button 
         onClick={handleClick}
         >
-            Show map
+            Visa vägbeskrivning
         </button>
     )
 }

@@ -1,0 +1,49 @@
+h1 {
+    font-size: 29px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+.container {
+    display:flex;
+
+}
+.cloudWrapper {
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.textbox {
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    top: 55%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+.startsteg {
+    margin: 0px;
+    padding:0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    object-fit:contain;
+}
+
+
+.cloud {
+    position: relative;
+}
+
+.seagull {
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+}
