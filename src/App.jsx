@@ -22,6 +22,7 @@ function App() {
   }, []);
 
   return <>{showStartPage ? <StartPage /> : <CategoryBox />}</>;
+
 }
 
 export default App;
