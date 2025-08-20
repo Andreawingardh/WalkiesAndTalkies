@@ -13,7 +13,7 @@ const locations = [
       image: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Kuggen%2C_Chalmers%2C_Gothenburg%2C_Sweden.jpg",
       description: "En färgstark byggnad som tillhör Chalmers tekniska högskola. Känd för sin unika arkitektur och hållbara design.",
       coordinates: { lat: 57.7061, lng: 11.9408 },
-      categories: ["historisk"]
+      categories: ["kultur"]
     },
     {
       name: "Lindholmsallén",
@@ -21,7 +21,7 @@ const locations = [
       image: "https://i0.wp.com/nordicexperience.com/wp-content/uploads/2018/01/Gothenburg-Lindholmen.jpg",
       description: "En central gata på Lindholmen som kantas av moderna byggnader och ett myllrande studentliv.",
       coordinates: { lat: 57.7080, lng: 11.9400 },
-      categories: ["lugn", "historisk"]
+      categories: ["lugn", "grönska"]
     },
     {
       name: "Älvrummet",
@@ -37,7 +37,7 @@ const locations = [
       image: "https://goteborg.com/uploads/images/place/7090/960x640/lindholmspiren.jpg",
       description: "En vacker promenad längs älven med utsikt över Göteborgs hamninlopp och centrum. Perfekt för en lugn promenad.",
       coordinates: { lat: 57.7067, lng: 11.9378 },
-      categories: ["lugn", "utsikt"]
+      categories: ["grönska", "utsikt"]
     }
   ];
   
