@@ -6,6 +6,7 @@ import { useState } from "react";
 import activities from "../../data/activities";
 import locations from "../../data/locations";
 import ActivityCard from "../ActivityCard/ActivityCard";
+import Distance from "../Distance/Distance";
 
 const themes = [
   { name: "Utsikt", id: 1 },
@@ -93,14 +94,20 @@ function CategoryBox() {
 
       {currentActivity && <ActivityCard question={currentActivity} />}
       {currentLocation && (
-        <LocationCard
-          location={currentLocation}
-          resetClick={() => {
-            setCurrentLocation("");
-            setCurrentActivity("");
-            setCurrentCategory("");
-          }}
-        />
+        <>
+          <LocationCard
+            location={currentLocation}
+            resetClick={() => {
+              setCurrentLocation("");
+              setCurrentActivity("");
+              setCurrentCategory("");
+            }}
+          />
+          <Distance
+            lat={currentLocation.coordinates.lat}
+            lng={currentLocation.coordinates.lng}
+          ></Distance>
+        </>
       )}
     </>
   );
