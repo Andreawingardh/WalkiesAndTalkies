@@ -96,7 +96,6 @@ function CategoryBox() {
 
       {currentActivity && (
         <>
-          {" "}
           <InfoCard showTitle={false} />
           <ActivityCard question={currentActivity} />{" "}
         </>
@@ -111,10 +110,6 @@ function CategoryBox() {
               setCurrentCategory("");
             }}
           />
-          <Distance
-            lat={currentLocation.coordinates.lat}
-            lng={currentLocation.coordinates.lng}
-          ></Distance>
         </>
       )}
     </>
