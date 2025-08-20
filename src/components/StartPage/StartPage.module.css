@@ -1,49 +1,59 @@
-h1 {
-    font-size: 29px;
+body {
+  background: linear-gradient(0deg, #d3def1 0%, #fcf8f2 40%);
 }
 
-h2 {
-    font-size: 14px;
+h1 {
+  font-family: Lusitana;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .container {
-    display:flex;
-
+  display: flex;
 }
 .cloudWrapper {
-    position:absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .textbox {
-    position: absolute;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    top: 55%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    color: black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
 }
 .startsteg {
-    margin: 0px;
-    padding:0px;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    object-fit:contain;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  object-fit: contain;
 }
 
-
 .cloud {
-    position: relative;
+  position: relative;
 }
 
 .seagull {
-    position: absolute;
-    top: 30%;
-    left: 36%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  transform: translate(-50%, -50%);
 }
