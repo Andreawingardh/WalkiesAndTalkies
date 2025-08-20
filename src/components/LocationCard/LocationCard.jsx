@@ -29,10 +29,13 @@ function LocationCard({ location, resetClick, ...props }) {
         <h1>{location.name}</h1>
         <img src="../src/assets/images/Slottsberget.png" />
         <div className={styles.descriptionWrapper}>
-          <p>{location.description}</p>
-          <button className={styles.modalLink} onClick={openModal}>
-            Läs mer
-          </button>
+          <div className={styles.descriptionBox}>
+            <div>{location.description}</div>
+            <div className={styles.fadeOverlay}></div>{" "}
+            <button className={styles.modalLink} onClick={openModal}>
+              Läs mer
+            </button>
+          </div>
         </div>
         <div className={styles.buttonDisplay}>
           <Button onClick={resetClick}>Börja om</Button>
