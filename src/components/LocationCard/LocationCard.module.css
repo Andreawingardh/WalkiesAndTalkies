@@ -128,3 +128,19 @@ button {
   justify-self: flex-end;
   height: 2.5rem
 }
+
+.descriptionBox {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.fadeOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+}
