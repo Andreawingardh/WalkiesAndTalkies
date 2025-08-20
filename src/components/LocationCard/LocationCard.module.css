@@ -1,9 +1,9 @@
 .normal {
   /* Layout */
-  width: 20.9375rem;
-  height: 27.3125rem;
+  width: 100%;
+  min-height: 35rem;
   align-items: center;
-  gap: -6rem;
+  justify-content: flex-end;
   flex-shrink: 0;
   flex-shrink: 0;
   line-height: normal;
@@ -11,21 +11,33 @@
   /* background: #d9d9d9; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
   display: flex;
   position: relative;
+  background: url("../../src/assets/images/LocationCard-background.svg")
+    transparent 50% / cover no-repeat;
+  background-size: cover;
+}
+
+.locationContent {
+  width: 22.35rem;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  color: #000;
+  color: var(--Mrkbl-text, #181335);
   text-align: center;
-  font-family: Inter;
-  font-size: 1.4375rem;
+
+  /* H1 Startskärm */
+  font-family: Lusitana;
+  font-size: 1.875rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
-  height: fit-content;
 }
 
 p {
@@ -58,13 +70,9 @@ p {
 }
 
 .modalLink {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   display: flex;
-  height: 1.75rem;
-  padding: 0.625rem;
-  justify-content: center;
+  padding: 0 0.625rem 0.625rem 0.625rem;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.625rem;
 
@@ -80,6 +88,7 @@ p {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+  background-color: transparent;
 }
 
 .background {
@@ -126,7 +135,7 @@ button {
   background: #000;
   color: white;
   justify-self: flex-end;
-  height: 2.5rem
+  height: 2.5rem;
 }
 
 .descriptionBox {
@@ -140,7 +149,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
-  background: linear-gradient(to bottom, transparent, white);
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, #d3def1);
   pointer-events: none;
 }
