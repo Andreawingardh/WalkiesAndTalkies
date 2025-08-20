@@ -7,23 +7,24 @@ import MapsButton from './components/maps_button/MapsButton';
 import Button from './components/Button/Button';
 import CategoryBox from './components/Category/CategoryBox';
 import StartPage from './components/StartPage/StartPage';
+import { useEffect, useState } from 'react';
 
 function App() {
- 
+  const [showStartPage, setShowStartPage] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowStartPage(false);
+    }, 2000); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-
-      <CategoryBox/>
-    <StartPage/>
-      {/* <CategoryBox/>
-      <Button>Question</Button>
-      <Button>Location</Button>
-      <LocationCard></LocationCard>
-      <ActivityCard></ActivityCard>
-      <MapsButton />   
-      </>
-  )
+      {showStartPage ? <StartPage /> : <CategoryBox />}
+    </>
+  );
 }
 
 export default App;
