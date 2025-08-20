@@ -19,6 +19,9 @@ const Distance = ({ lat, lng }) => {
           startLocationLng = startLocation.lng;
 
           // setUserLocation(startLocation);
+          
+          localStorage.setItem("startLocationLat", startLocationLat)
+          localStorage.setItem("startLocationLng", startLocationLng)
           console.log("start" + startLocation.lng);
           console.log("end" + endPositionLng);
 
