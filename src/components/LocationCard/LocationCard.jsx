@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import LocationCardModal from "../LocationCardModal/LocationCardModal";
 import { useState } from "react";
 
-function LocationCard({ location, restartClick, ...props }) {
+function LocationCard({ location, resetClick, ...props }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -35,7 +35,7 @@ function LocationCard({ location, restartClick, ...props }) {
           </button>
         </div>
         <div className={styles.buttonDisplay}>
-          <Button onClick={restartClick}>Börja om</Button>
+          <Button onClick={resetClick}>Börja om</Button>
           <MapsButton />
         </div>
       </div>

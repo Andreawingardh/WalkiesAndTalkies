@@ -25,7 +25,6 @@ function CategoryBox() {
 
   function handleClick(e) {
     e.preventDefault();
-    console.log(currentCategory);
     getRandomLocation();
     getRandomActivity();
   }
@@ -50,13 +49,21 @@ function CategoryBox() {
     let arrayToUse = locationArray;
 
     if (currentCategory) {
-      arrayToUse = locationArray.filter((item) => item.categories.includes(currentCategory));
+      arrayToUse = locationArray.filter((item) =>
+        item.categories.includes(currentCategory)
+      );
     }
 
     let number = Math.floor(Math.random() * arrayToUse.length);
 
     setCurrentLocation(arrayToUse[number]);
-    setLocationArray(arrayToUse.filter((_, index) => index !== number));
+    const selectedLocation = arrayToUse[number];
+    const originalIndex = locationArray.findIndex(
+      (item) => item === selectedLocation
+    );
+    setLocationArray(
+      locationArray.filter((_, index) => index !== originalIndex)
+    );
   }
   return (
     <>
@@ -87,9 +94,12 @@ function CategoryBox() {
       {currentActivity && <ActivityCard question={currentActivity} />}
       {currentLocation && (
         <LocationCard
-          name={currentLocation.name}
-          description={currentLocation.description}
-          categories={currentLocation.categories}
+          location={currentLocation}
+          resetClick={() => {
+            setCurrentLocation("");
+            setCurrentActivity("");
+            setCurrentCategory("");
+          }}
         />
       )}
     </>
