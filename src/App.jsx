@@ -7,6 +7,7 @@ import MapsButton from './components/maps_button/MapsButton';
 import Button from './components/Button/Button';
 import CategoryBox from './components/Category/CategoryBox';
 import StartPage from './components/StartPage/StartPage';
+import Distance from './components/Distance/Distance';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -22,6 +23,17 @@ function App() {
 
   return (
     <>
+<Distance/> 
+      <CategoryBox/>
+    <StartPage/>
+       <CategoryBox/>
+      <Button>Question</Button>
+      <Button>Location</Button>
+      <LocationCard></LocationCard>
+      <ActivityCard></ActivityCard>
+      <MapsButton />   
+      </>
+  )
       {showStartPage ? <StartPage /> : <CategoryBox />}
     </>
   );
