@@ -5,7 +5,7 @@ const locations = [
       image: "https://upload.wikimedia.org/wikipedia/commons/4/49/Lindholmen_Science_Park.jpg",
       description: "Ett centrum för innovation och forskning inom IT, transport och media. Här möts företag, studenter och forskare.",
       coordinates: { lat: 57.7065, lng: 11.9404 },
-      categories: ["historisk", "utsikt"]
+      categories: ["vatten", "utsikt"]
     },
     {
       name: "Kuggen",
@@ -29,7 +29,7 @@ const locations = [
       image: "https://goteborg.com/uploads/images/place/7087/960x640/150831_Aelvrummet_27.jpg",
       description: "Ett utställningscenter om stadsutvecklingen i Göteborg, med modeller och information om framtidens stad.",
       coordinates: { lat: 57.7073, lng: 11.9399 },
-      categories: ["historisk"]
+      categories: ["historia"]
     },
     {
       name: "Kajpromenaden vid Lindholmspiren",
