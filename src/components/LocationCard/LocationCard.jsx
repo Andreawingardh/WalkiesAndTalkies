@@ -5,15 +5,7 @@ import Button from "../Button/Button";
 import LocationCardModal from "../LocationCardModal/LocationCardModal";
 import { useState } from "react";
 
-function LocationCard({
-  name,
-  description,
-  coordinates,
-  image,
-  categories,
-  address,
-  ...props
-}) {
+function LocationCard({ location, restartClick, ...props }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -34,23 +26,25 @@ function LocationCard({
             fill="#E9E9E8"
           />
         </svg>
-        <h1>{name}</h1>
+        <h1>{location.name}</h1>
         <img src="../src/assets/images/Slottsberget.png" />
         <div className={styles.descriptionWrapper}>
-          <p>{description}</p>
+          <p>{location.description}</p>
           <button className={styles.modalLink} onClick={openModal}>
             Läs mer
           </button>
         </div>
         <div className={styles.buttonDisplay}>
-          <Button>Börja om</Button>
+          <Button onClick={restartClick}>Börja om</Button>
           <MapsButton />
         </div>
       </div>
       <LocationCardModal isOpen={isModalOpen} onClose={closeModal}>
-              <h2>{ name }</h2>
-              <p>{ description }</p>
-        <Button onClick={closeModal} className={styles.modalButtonClose}>Stäng</Button>
+        <h2>{location.name}</h2>
+        <p>{location.description}</p>
+        <Button onClick={closeModal} className={styles.modalButtonClose}>
+          Stäng
+        </Button>
       </LocationCardModal>
     </>
   );
