@@ -7,16 +7,17 @@ import MapsButton from './components/maps_button/MapsButton';
 import Button from './components/Button/Button';
 import CategoryBox from './components/Category/CategoryBox';
 import StartPage from './components/StartPage/StartPage';
+import Distance from './components/Distance/Distance';
 
 function App() {
  
 
   return (
     <>
-
+<Distance/> 
       <CategoryBox/>
     <StartPage/>
-      {/* <CategoryBox/>
+       <CategoryBox/>
       <Button>Question</Button>
       <Button>Location</Button>
       <LocationCard></LocationCard>
