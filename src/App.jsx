@@ -8,9 +8,18 @@ import Button from './components/Button/Button';
 import CategoryBox from './components/Category/CategoryBox';
 import StartPage from './components/StartPage/StartPage';
 import Distance from './components/Distance/Distance';
+import { useEffect, useState } from 'react';
 
 function App() {
- 
+  const [showStartPage, setShowStartPage] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowStartPage(false);
+    }, 2000); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -25,6 +34,9 @@ function App() {
       <MapsButton />   
       </>
   )
+      {showStartPage ? <StartPage /> : <CategoryBox />}
+    </>
+  );
 }
 
 export default App;
