@@ -19,9 +19,9 @@ const Distance = ({ lat, lng }) => {
           startLocationLng = startLocation.lng;
 
           // setUserLocation(startLocation);
-          
-          localStorage.setItem("startLocationLat", startLocationLat)
-          localStorage.setItem("startLocationLng", startLocationLng)
+
+          localStorage.setItem("startLocationLat", startLocationLat);
+          localStorage.setItem("startLocationLng", startLocationLng);
           console.log("start" + startLocation.lng);
           console.log("end" + endPositionLng);
 
@@ -69,7 +69,15 @@ const Distance = ({ lat, lng }) => {
     getUserLocation();
   }, []);
 
-  return <div>{walkingTime && <p>Gångtid: {walkingTime} minuter</p>}</div>;
+  return (
+    <div>
+      {walkingTime && (
+        <p>
+          Cirka <strong>{walkingTime} min</strong> promenad från dig
+        </p>
+      )}
+    </div>
+  );
 };
 
 export default Distance;
