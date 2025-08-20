@@ -1,4 +1,8 @@
-.title {
-    font-size: 50px;
-    color: hotpink;
+.infoHeader {
+    min-height: 200px;
+    min-width: 400px;
+}
+
+.infoHeader h1 {
+    padding: 50px 80px 10px 80px;
 }
