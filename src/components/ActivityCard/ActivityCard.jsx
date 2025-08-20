@@ -3,7 +3,6 @@ import styles from "./ActivityCard.module.css";
 import Button from '../Button/Button';
 import activities from '../../data/activities';
 import CloudActivity from "../../assets/images/Cloud-activity.svg";
-import Seagull from "../../assets/images/Seagull.png";
 import Refresh from "../../assets/images/refresh.svg";
 
 function ActivityCard({ question, ...props }) {
