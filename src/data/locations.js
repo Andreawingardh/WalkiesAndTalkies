@@ -4,7 +4,7 @@ const locations = [
       image: "/images/ramberget.jpg",
       description: "Ramberget är en av Göteborgs mest kända utsiktsplatser. Härifrån, 87 meter över havet, kan du se hela staden breda ut sig – från hamninloppet med Älvsborgsbron till centrum och, vid klart väder, ända bort mot Vinga fyr.\n\nNamnet kommer från ordet rám eller ravn, som betyder korp – och än idag kan du se korpar cirkla kring berget. Själva berget formades under istiden, när en tjock inlandsis slipade fram de rundade klipporna.\n\nRamberget är en del av Keillers park, som skapades i början av 1900-talet efter att James Keiller donerat marken till Göteborg. Då var berget kalt och täckt av ljung, men idag är det omgivet av ek, bok och tall som gör området grönt och inbjudande.\n\nMånga göteborgare kommer hit för en picknick, en löprunda eller bara för att andas ut och njuta av utsikten. Det finns stigar, sittplatser och flera platåer där du kan stanna och låta blicken vandra över staden.",
       coordinates: { lat: 57.71345040359107, lng: 11.936638727925098 },
-      categories: ["utsikt"]
+      categories: ["utsikt", "grönska"]
     },
     {
       name: "Slottsberget",
@@ -25,7 +25,7 @@ const locations = [
       image: "/images/sannegardshamnen.jpg",
       description: "Sannegårdshamnen invigdes 1913 som en industrihamn för kol, koks och salt. Här lossades varor som försörjde hela Göteborg. Idag är området helt omvandlat: en modern stadsdel har vuxit fram med bostäder, småbåtshamn, strandpark och en gång- och cykelbro som öppnas för segelbåtar. Kajpromenaden är perfekt för en stilla promenad vid vattnet, där industrins historia möter det nya stadslivet vid älven.",
       coordinates: { lat: 57.70852264165404, lng: 11.927523499428117 },
-      categories: ["historia", "kultur"]
+      categories: ["vatten", "utsikt"]
     },
     {
       name: "Lindholmens odlarförening",
@@ -60,28 +60,28 @@ const locations = [
       image: "/images/farjenasparken.jpg",
       description: "Färjenäsparken, belägen vid foten av Älvsborgsbron på Hisingen, är en 15 hektar stor stadspark med en rik historia. Området var en gång platsen för det första Göteborg, grundlagt av Karl IX år 1603, och har sedan dess utvecklats från ett industriområde till en modern park för rekreation och evenemang. Parken erbjuder en mångfald av aktiviteter, inklusive en av Hisingens största lekplatser, en 1 400 meter lång motionsslinga, fotbollsplan, skatepark, streetbasketplan och utsiktsplatser med grillmöjligheter. Den nyligen utbyggda delen av parken, färdigställd mellan 2021 och 2023, sträcker sig ända ner till älven och ramar in den stora gräsytan med naturlika planteringar som på sikt ska utvecklas till en artrik skogsmiljö.",
       coordinates: { lat: 57.6978611974361, lng: 11.901256583986251 },
-      categories: ["gronska", "kultur"]
+      categories: ["gronska"]
     },
     {
       name: "Lindholmsdockans Hamn",
       image: "/images/lindholmsdockan.jpg",
       description: "Gamla torrdockan anlades i slutet av 1800-talet och användes under många år för skeppsbyggen och reparationer av fartyg. Här byggdes och underhölls några av de fartyg som satte Göteborg på kartan som en av världens ledande varvsstäder under 1900-talet.\n\nNär varvsindustrin lades ner på 1980-talet stod dockan länge som ett minnesmärke över den epok som format hela Hisingen. I samband med Lindholmens omvandling till en modern stadsdel bevarades dockan och området runt den har fått nytt liv. Idag används den inte längre för skeppsbyggen, men den fungerar som en småbåtshamn och ett levande inslag i stadsbilden, där historien tydligt möter nutiden.\n\nMed sina gamla kajkanter, bevarade industridetaljer och närheten till både moderna byggnader och vattenlivet, är Lindholmsdockans hamn ett unikt kulturarv som berättar om Göteborgs starka band till varven och sjöfarten.",
       coordinates: { lat: 57.703339512957186, lng: 11.930713712036136 },
-      categories: ["historia", "kultur"]
+      categories: ["vatten"]
     },
     {
       name: "Lindholmens Konsthall",
       image: "/images/konsthall.jpg",
       description: "Lindholmens Konsthall är en plats där samtida konst möter Göteborgs kreativa stadsdel. Konsthallen visar utställningar av både etablerade och nya konstnärer inom måleri, skulptur, fotografi och installationer. Här arrangeras även workshops, föreläsningar och evenemang som bjuder in besökare att själva reflektera och delta i konstnärliga processer. Konsthallen ligger centralt på Lindholmen och fungerar som en mötesplats för konstintresserade i alla åldrar.",
       coordinates: { lat: 57.7055556774925, lng: 11.933235666269335 },
-      categories: ["historia", "kultur"]
+      categories: ["kultur"]
     },
     {
       name: "Sverige största konstverk",
       image: "/images/konstverk.jpg",
       description: "På fastigheten Pannverkstaden på Lindholmen pryder Sveriges största konstverk en fasad som sträcker sig över hela 2 800 kvadratmeter. Konstverket skapades 2023 av den internationellt kände konstnären HOXXOH (Douglas Hoekzema) i samarbete med gatukonstorganisationen Artscape och Älvstranden Utveckling AB. Den färgsprakande muralmålningen, som täcker en hel vägg, har blivit ett landmärke i området och en symbol för kreativitet och stadsutveckling.",
       coordinates: { lat: 57.71050633154905, lng: 11.949434334965696 },
-      categories: ["historia", "kultur"]
+      categories: ["kultur"]
     }
   ];
   
