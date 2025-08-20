@@ -2,16 +2,16 @@ import CategoryButton from "./CategoryButton";
 import styles from "./Category.module.css";
 import LocationCard from "../LocationCard/LocationCard";
 import Button from "../Button/Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import activities from "../../data/activities";
 import locations from "../../data/locations";
 import ActivityCard from "../ActivityCard/ActivityCard";
 
 const themes = [
   { name: "Utsikt", id: 1 },
-  { name: "Mysigt", id: 2 },
-  { name: "Lugnt", id: 3 },
-  { name: "Skog", id: 4 },
+  { name: "Kultur", id: 2 },
+  { name: "Grönska", id: 3 },
+  { name: "Historia", id: 4 },
   { name: "Vatten", id: 5 },
 ];
 
@@ -25,6 +25,7 @@ function CategoryBox() {
 
   function handleClick(e) {
     e.preventDefault();
+    console.log(currentCategory);
     getRandomLocation();
     getRandomActivity();
   }
@@ -45,15 +46,21 @@ function CategoryBox() {
       setDisabledButton(true);
       return;
     }
-    let number = Math.floor(Math.random() * locationArray.length);
 
-    setCurrentLocation(locationArray[number]);
-    console.log(currentLocation);
-    setLocationArray(locationArray.filter((_, index) => index !== number));
+    let arrayToUse = locationArray;
+
+    if (currentCategory) {
+      arrayToUse = locationArray.filter((item) => item.categories.includes(currentCategory));
+    }
+
+    let number = Math.floor(Math.random() * arrayToUse.length);
+
+    setCurrentLocation(arrayToUse[number]);
+    setLocationArray(arrayToUse.filter((_, index) => index !== number));
   }
   return (
     <>
-      {currentLocation.length == 0 && (
+      {!currentLocation && (
         <div className={styles.outerBox}>
           <div className={styles.headerBox}>
             <h2>Skräddarsy din promenad</h2>
@@ -62,7 +69,10 @@ function CategoryBox() {
           <form className={styles.box}>
             {themes.map((theme) => (
               <CategoryButton
-                onClick={() => setCurrentCategory(theme.name)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentCategory(theme.name.toLowerCase());
+                }}
                 themeName={theme.name}
                 key={theme.id}
               />
@@ -79,6 +89,7 @@ function CategoryBox() {
         <LocationCard
           name={currentLocation.name}
           description={currentLocation.description}
+          categories={currentLocation.categories}
         />
       )}
     </>
