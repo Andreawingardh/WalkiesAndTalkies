@@ -12,7 +12,7 @@ function StartPage() {
 
         <div className={styles.cloudWrapper}>
           <img className={styles.cloud} src={CloudStart} />
-          {/* <img className={styles.seagull} src={Seagull} /> */}
+
           <div className={styles.textbox}>
           <h1>TankeStigen</h1>
           <h2>Lindholmen</h2>
