@@ -15,7 +15,7 @@ function StartPage() {
 
           <div className={styles.textbox}>
           <h1>TankeStigen</h1>
-          <h2>Lindholmen</h2>
+          <h3>Lindholmen</h3>
           </div>
         </div>
       </div>
