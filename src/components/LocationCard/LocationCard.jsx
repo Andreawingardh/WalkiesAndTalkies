@@ -39,7 +39,7 @@ function LocationCard({ location, resetClick, ...props }) {
         </div>
         <div className={styles.buttonDisplay}>
           <Button onClick={resetClick}>Börja om</Button>
-          <MapsButton destination={location.coordinates.lat + "," + location.coordinates.lng}/>
+          <MapsButton origin={localStorage.getItem("startLocationLat") + "," + localStorage.getItem("startLocationLng")} destination={location.coordinates.lat + "," + location.coordinates.lng}/>
         </div>
       </div>
       <LocationCardModal isOpen={isModalOpen} onClose={closeModal}>
