@@ -28,7 +28,7 @@ const [disabledButton, setDisabledButton] = useState(false)
 
     <img className={styles.cloud} src={CloudActivity} {...props}/>
       <div className={styles.textbox}>
-      <p>{question}</p>
+      <p> {!currentActivity && question}</p>
       <p>{!disabledButton ? currentActivity : "tyvärr slut på frågor"}</p>
       </div>
       <Button className={styles.button} onClick={getRandomActivity} disabled={disabledButton}>
