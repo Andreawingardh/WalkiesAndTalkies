@@ -1,8 +1,20 @@
 .infoHeader {
-    min-height: 200px;
-    min-width: 400px;
+  min-height: 194px;
+  width: 100vw;
+  background-size: cover;
 }
 
 .infoHeader h1 {
-    padding: 50px 80px 10px 80px;
+  padding: 50px 80px 10px 80px;
+  font-family: Lusitana;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.infoHeaderSmall {
+  min-height: 125.96px;
+  width: 100vw;
+  background-size: cover;
 }
