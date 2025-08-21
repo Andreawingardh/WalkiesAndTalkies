@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 export const getUserLocation = () => {
   return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
+      const options = {
+        enableHighAccuracy: true,  // Use GPS instead of network
+        timeout: 10000,           // Wait up to 10 seconds
+        maximumAge: 0             // Don't use cached location
+      };
+      
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const location = {
@@ -18,7 +24,8 @@ export const getUserLocation = () => {
         (error) => {
           console.log("Error:", error.message);
           reject(error);
-        }
+        },
+        options  // Pass the options as the third parameter
       );
     } else {
       const error = new Error("Geolocation stöds inte");
@@ -46,7 +53,7 @@ export const calculateWalkingTime = async (
     const timeInMinutes = Math.round(timeInMilliseconds / 1000 / 60);
     return timeInMinutes;
   } catch (error) {
-    console.error("Error calculating walking time:", error);
+    console.error("Fel när promenadtiden skulle räknas ut:", error);
     throw error;
   }
 };
@@ -64,6 +71,8 @@ const Distance = ({ lat, lng }) => {
       
       // Get user location
       const userLocation = await getUserLocation();
+      console.log("start" + userLocation.lng);
+      console.log("end" + lng);
       
       // Calculate walking time
       const time = await calculateWalkingTime(
@@ -87,7 +96,7 @@ const Distance = ({ lat, lng }) => {
   }, [lat, lng]);
 
   if (loading) {
-    return <div>Räknar ut promenadtid...</div>;
+    return <div>Calculating walking time...</div>;
   }
 
   if (error) {
