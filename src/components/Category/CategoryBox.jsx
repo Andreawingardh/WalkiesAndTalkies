@@ -76,7 +76,8 @@ function CategoryBox() {
             <h2>Skräddarsy din promenad</h2>
             <p>Välj en eller tryck generera för att slumpa fram</p>
           </div>
-          <form className={styles.box}>
+          <form>
+            <div className={styles.box}>
             {themes.map((theme) => (
               <CategoryButton
                 onClick={(e) => {
@@ -87,9 +88,12 @@ function CategoryBox() {
                 key={theme.id}
               />
             ))}
-            <Button onClick={(e) => handleClick(e)} disabled={disabledButton}>
+            </div>
+            <div className={styles.generateBox}>
+             <Button className={styles.generateBtn} onClick={(e) => handleClick(e)} disabled={disabledButton}>
               Generera
             </Button>
+            </div>
           </form>
         </div>
       )}
