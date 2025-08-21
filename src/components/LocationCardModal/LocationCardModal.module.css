@@ -15,12 +15,38 @@
 }
 
 .modalContent {
-  background: white;
+  border-radius: 1.25rem;
+  background: var(--ggvit, #fcf8f2);
   padding: 1.25rem; /* 20px */
   border-radius: 0.25rem; /* 4px */
   position: relative;
   max-width: 31.25rem; /* 500px */
   width: 90%;
+}
+
+.modalContent h1 {
+  color: var(--Mrkbl-text, #181335);
+  text-align: center;
+
+  /* H1 Startskärm */
+  font-family: Lusitana;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.modalContent p {
+  color: var(--Mrkbl-text, #181335);
+
+  /* Brödtext popup */
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 200% */
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
 }
 
 .modalClose {
