@@ -1,8 +1,8 @@
 import React from "react";
-import Startsteg from "../../assets/images/Startsteg.svg";
-import CloudStart from "../../assets/images/Cloud-start.svg";
-import Seagull from "../../assets/images/Seagull.png";
+import Startsteg from "/src/assets/images/startsteg.svg";
+import CloudStart from "/src/assets/images/cloud-start.svg";
 import styles from "./StartPage.module.css";
+
 
 function StartPage() {
   return (
