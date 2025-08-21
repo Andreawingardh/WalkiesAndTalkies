@@ -8,19 +8,21 @@ button {
   background-color: #3b5073;
   color: #fefefe;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  width: 138px;
-  height: 59px;
+  width: 8.625rem; /* 138px */
+  height: 3.6875rem; /* 59px */
 }
+
 button:focus {
   outline: none;
   border: none;
 }
+
 button:active {
-    color: black;
-    background-color: #fefefe;
-    border: 3px solid #3b5073;
+  color: black;
+  background-color: #fefefe;
+  border: 0.1875rem solid #3b5073; /* 3px */
 }

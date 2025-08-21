@@ -10,25 +10,25 @@
   align-items: center;
   z-index: 1000;
   width: 100%;
-  padding: 1.25rem 0.75rem;
-  gap: 1.875rem;
+  padding: 1.25rem 0.75rem; /* 20px 12px */
+  gap: 1.875rem; /* 30px */
 }
 
 .modalContent {
   background: white;
-  padding: 20px;
-  border-radius: 4px;
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.25rem; /* 4px */
   position: relative;
-  max-width: 500px;
+  max-width: 31.25rem; /* 500px */
   width: 90%;
 }
 
 .modalClose {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0.625rem; /* 10px */
+  right: 0.9375rem; /* 15px */
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   cursor: pointer;
 }
