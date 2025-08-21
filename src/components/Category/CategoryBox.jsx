@@ -10,11 +10,11 @@ import Distance from "../Distance/Distance";
 import InfoCard from "../InfoCard/InfoCard";
 
 const themes = [
-  { name: "Utsikt", id: 1 },
-  { name: "Kultur", id: 2 },
-  { name: "Grönska", id: 3 },
-  { name: "Historia", id: 4 },
-  { name: "Vatten", id: 5 },
+  { name: "Utsikt", imgUrl: "/images/slottsberget.jpg", id: 1 },
+  { name: "Kultur", imgUrl: "/images/konstverk.png", id: 2 },
+  { name: "Grönska", imgUrl: "/images/farjenasparken.png", id: 3 },
+  { name: "Historia", imgUrl: "/images/aftonstjarnan.jpg",id: 4 },
+  { name: "Vatten", imgUrl: "/images/lindholmsdockan.jpg", id: 5 },
 ];
 
 function CategoryBox() {
@@ -74,7 +74,8 @@ function CategoryBox() {
           <InfoCard showTitle={true} />
           <div className={styles.headerBox}>
             <h2>Skräddarsy din promenad</h2>
-            <p>Välj en eller tryck generera för att slumpa fram</p>
+            <p>Välj en kategori eller tryck på ’Generera’ för att få en slumpad promenad. 
+Under promenaden får du en fråga eller utmaning att fundera på.</p>
           </div>
           <form>
             <div className={styles.box}>
@@ -85,6 +86,7 @@ function CategoryBox() {
                   setCurrentCategory(theme.name.toLowerCase());
                 }}
                 themeName={theme.name}
+                imgUrl={theme.imgUrl}
                 key={theme.id}
               />
             ))}
