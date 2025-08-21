@@ -77,8 +77,7 @@ function CategoryBox() {
             <p>Välj en kategori eller tryck på ’Generera’ för att få en slumpad promenad. 
 Under promenaden får du en fråga eller utmaning att fundera på.</p>
           </div>
-          <form>
-            <div className={styles.box}>
+          <form className={styles.box}>
             {themes.map((theme) => (
               <CategoryButton
                 onClick={(e) => {
@@ -90,12 +89,9 @@ Under promenaden får du en fråga eller utmaning att fundera på.</p>
                 key={theme.id}
               />
             ))}
-            </div>
-            <div className={styles.generateBox}>
-             <Button className={styles.generateBtn} onClick={(e) => handleClick(e)} disabled={disabledButton}>
+            <Button onClick={(e) => handleClick(e)} disabled={disabledButton}>
               Generera
             </Button>
-            </div>
           </form>
         </div>
       )}

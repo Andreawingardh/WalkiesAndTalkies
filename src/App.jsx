@@ -16,12 +16,13 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowStartPage(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return <>{showStartPage ? <StartPage /> : <CategoryBox />}</>;
+
 }
 
 export default App;
