@@ -126,8 +126,6 @@ button {
   align-items: center;
   gap: 0.625rem;
   border-radius: 1.25rem; /* 20px */
-  background: #000;
-  color: white;
   justify-self: flex-end;
   height: 2.5rem; /* 40px */
 }
