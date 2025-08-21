@@ -14,7 +14,8 @@
 }
 
 .infoHeaderSmall {
-  min-height: 125.96px;
+  min-height: 110.96px;
   width: 100vw;
   background-size: cover;
+  overflow: visible;
 }
