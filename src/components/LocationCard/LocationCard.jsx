@@ -25,7 +25,7 @@ function LocationCard({ location, resetClick, ...props }) {
           <div className={styles.descriptionWrapper}>
             <div className={styles.descriptionBox}>
               <div>{location.description}</div>
-              <div className={styles.fadeOverlay}></div>{" "}
+              <div className={styles.fadeOverlay}></div>
             </div>
           </div>
           <button className={styles.modalLink} onClick={openModal}>
