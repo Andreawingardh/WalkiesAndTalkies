@@ -4,41 +4,41 @@
 
 .textbox {
     position: absolute;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     top: 54%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: black;
 }
 
 .cloudWrapper {
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
 }
 
 .button {
-    width: 50px;
-    height:50px;
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
     background-color: #3B5073;
     position: absolute;
-    top:70%;
-    left:75%;
-    padding: 10px 0px;
+    top: 70%;
+    left: 75%;
+    padding: 0.625rem 0rem; /* 10px 0px */
 }
 
 .refresh {
-    width: 30px;
-    height: 30px;
-    padding:0px;
+    width: 1.875rem; /* 30px */
+    height: 1.875rem; /* 30px */
+    padding: 0rem;
 }
 
 p {
     font-family: Inter;
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
