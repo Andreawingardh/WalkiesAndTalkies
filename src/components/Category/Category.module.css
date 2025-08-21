@@ -68,7 +68,8 @@
   text-align: center;
 }
 
-.categoryWrapper:focus {
+.categoryWrapper:focus,
+.categoryWrapper:active {
   border: 0.1875rem solid #5a7095; /* 3px */
   box-shadow: 0rem 0rem 0.625rem 0.125rem #3B5073E0; /* 0px 0px 10px 2px */
 }
