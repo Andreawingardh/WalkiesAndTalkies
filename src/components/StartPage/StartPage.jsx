@@ -12,11 +12,13 @@ function StartPage() {
         <div className={styles.cloudWrapper}>
           <img className={styles.cloud} src={CloudStart} />
 
+          <div className={styles.textboxWrapper}>
           <div className={styles.textbox}>
           <h1>TankeStigen</h1>
           <h3>Lindholmen</h3>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
