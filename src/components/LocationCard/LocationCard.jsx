@@ -3,7 +3,7 @@ import MapsButton from "../maps_button/MapsButton";
 import Button from "../Button/Button";
 import LocationCardModal from "../LocationCardModal/LocationCardModal";
 import { useState } from "react";
-import {Distance} from "../Distance/Distance";
+import Distance from "../Distance/Distance";
 
 function LocationCard({ location, resetClick, ...props }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
