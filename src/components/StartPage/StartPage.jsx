@@ -1,6 +1,6 @@
 import React from "react";
 import Startsteg from "/src/assets/images/startsteg.svg";
-import CloudStart from "/src/assets/images/cloud-start.svg";
+import CloudStart from "../../../src/assets/images/cloud-start.svg";
 import styles from "./StartPage.module.css";
 
 
