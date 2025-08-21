@@ -87,6 +87,7 @@ Under promenaden får du en fråga eller utmaning att fundera på.</p>
                 }}
                 themeName={theme.name}
                 imgUrl={theme.imgUrl}
+                isSelected={currentCategory === theme.name.toLocaleLowerCase()}
                 key={theme.id}
               />
             ))}
