@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./LocationCard.module.css";
 import MapsButton from "../maps_button/MapsButton";
 import Button from "../Button/Button";
@@ -17,7 +16,7 @@ function LocationCard({ location, resetClick, ...props }) {
         <div className={styles.locationContent}>
           <h1>{location.name}</h1>
 
-          <img src="../src/assets/images/Slottsberget.png" />
+          <img src={location.image} />
           <p>   <Distance
             lat={location.coordinates.lat}
             lng={location.coordinates.lng}
