@@ -74,8 +74,8 @@ function CategoryBox() {
           <InfoCard showTitle={true} />
           <div className={styles.headerBox}>
             <h2>Skräddarsy din promenad</h2>
-            <p>Välj en kategori eller tryck på ’Generera’ för att få en slumpad promenad. 
-Under promenaden får du en fråga eller utmaning att fundera på.</p>
+            <p>Välj en kategori och tryck på ’Promenera’ för att få en slumpad promenad. Du kan också bara trycka på promenera.
+              Under promenaden får du en fråga att fundera på.</p>
           </div>
           <form>
             <div className={styles.box}>
@@ -94,7 +94,7 @@ Under promenaden får du en fråga eller utmaning att fundera på.</p>
             </div>
             <div className={styles.generateBox}>
              <Button className={styles.generateBtn} onClick={(e) => handleClick(e)} disabled={disabledButton}>
-              Generera
+              Promenera
             </Button>
             </div>
           </form>
