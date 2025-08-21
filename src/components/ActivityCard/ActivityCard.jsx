@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import styles from "./ActivityCard.module.css";
 import Button from '../Button/Button';
-import activities from '../../data/activities';
-import CloudActivity from "../../assets/images/cloud-activity.svg";
-import Refresh from "../../assets/images/refresh.svg";
+import activities from '/src/data/activities';
+import CloudActivity from "/src/assets/images/cloud-activity.svg";
+import Refresh from "/src/assets/images/refresh.svg";
 
 function ActivityCard({ question, ...props }) {
 const [currentActivity, setCurrentActivity] = useState("");
