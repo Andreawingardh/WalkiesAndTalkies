@@ -1,73 +1,98 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const Distance = ({ lat, lng }) => {
-  const [endPositionLat, setEndPositionLat] = useState(lat);
-  const [endPositionLng, setEndPositionLng] = useState(lng);
-  const [walkingTime, setWalkingTime] = useState(null);
-  let startLocationLat;
-  let startLocationLng;
-
-  const getUserLocation = () => {
+// Exportable function to get user's current location
+export const getUserLocation = () => {
+  return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const startLocation = {
+          const location = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
-          startLocationLat = startLocation.lat;
-          startLocationLng = startLocation.lng;
-
-          // setUserLocation(startLocation);
-
-          localStorage.setItem("startLocationLat", startLocationLat);
-          localStorage.setItem("startLocationLng", startLocationLng);
-          console.log("start" + startLocation.lng);
-          console.log("end" + endPositionLng);
-
-          calculateWalkingTime(
-            endPositionLat,
-            endPositionLng,
-            startLocationLat,
-            startLocationLng
-          );
+          // Store in localStorage if needed
+          localStorage.setItem("startLocationLat", location.lat);
+          localStorage.setItem("startLocationLng", location.lng);
+          resolve(location);
         },
         (error) => {
           console.log("Error:", error.message);
+          reject(error);
         }
       );
     } else {
-      console.log("Geolocation stöds inte");
+      const error = new Error("Geolocation stöds inte");
+      console.log(error.message);
+      reject(error);
     }
-    // return startLocation;
-  };
+  });
+};
 
-  const calculateWalkingTime = (
-    endPositionLat,
-    endPositionLng,
-    startLocationLat,
-    startLocationLng
-  ) => {
-    // if (!userLocation) {
-    //         return;
-    //     }
-    const url = `https://graphhopper.com/api/1/route?point=${startLocationLat},${startLocationLng}&point=${endPositionLat},${endPositionLng}&profile=foot&key=${
-      import.meta.env.VITE_GRAPHHOPPER_API_KEY
-    }`;
+// Exportable function to calculate walking time
+export const calculateWalkingTime = async (
+  startLat,
+  startLng,
+  endLat,
+  endLng
+) => {
+  const url = `https://graphhopper.com/api/1/route?point=${startLat},${startLng}&point=${endLat},${endLng}&profile=foot&key=${
+    import.meta.env.VITE_GRAPHHOPPER_API_KEY
+  }`;
 
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        const timeInMilliseconds = data.paths[0].time;
-        const timeInMinutes = Math.round(timeInMilliseconds / 1000 / 60);
-        setWalkingTime(timeInMinutes);
-      });
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const timeInMilliseconds = data.paths[0].time;
+    const timeInMinutes = Math.round(timeInMilliseconds / 1000 / 60);
+    return timeInMinutes;
+  } catch (error) {
+    console.error("Error calculating walking time:", error);
+    throw error;
+  }
+};
+
+// Main Distance component
+const Distance = ({ lat, lng }) => {
+  const [walkingTime, setWalkingTime] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const calculateAndSetWalkingTime = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      // Get user location
+      const userLocation = await getUserLocation();
+      
+      // Calculate walking time
+      const time = await calculateWalkingTime(
+        userLocation.lat,
+        userLocation.lng,
+        lat,
+        lng
+      );
+      
+      setWalkingTime(time);
+    } catch (err) {
+      setError(err.message);
+      console.error("Error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
-  console.log("det tar " + walkingTime + " MINUTER");
 
   useEffect(() => {
-    getUserLocation();
-  }, []);
+    calculateAndSetWalkingTime();
+  }, [lat, lng]);
+
+  if (loading) {
+    return <div>Räknar ut promenadtid...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div>
