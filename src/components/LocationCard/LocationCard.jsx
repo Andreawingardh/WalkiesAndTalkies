@@ -46,7 +46,7 @@ function LocationCard({ location, resetClick, ...props }) {
         </div>
       </div>
       <LocationCardModal isOpen={isModalOpen} onClose={closeModal}>
-        <h2>{location.name}</h2>
+        <h1>{location.name}</h1>
         <p>{location.description}</p>
         <Button onClick={closeModal} className={styles.modalButtonClose}>
           Stäng
