@@ -1,9 +1,9 @@
 import styles from "./Category.module.css";
 
-function CategoryButton({ themeName, imgUrl,onClick, ...props }) {
+function CategoryButton({ themeName, imgUrl,onClick, isSelected, props}) {
   return (
     <>
-      <button className={styles.categoryWrapper} onClick={onClick} {...props}>
+      <button className={`${styles.categoryWrapper} ${isSelected ? styles.selected : ""}`} onClick={onClick} {...props}>
         <img
           src={imgUrl}
           alt=""
