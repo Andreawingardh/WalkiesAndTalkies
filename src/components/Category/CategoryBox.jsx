@@ -10,11 +10,11 @@ import Distance from "../Distance/Distance";
 import InfoCard from "../InfoCard/InfoCard";
 
 const themes = [
-  { name: "Utsikt", imgUrl: "/images/slottsberget.jpg", id: 1 },
-  { name: "Kultur", imgUrl: "/images/konstverk.png", id: 2 },
-  { name: "Grönska", imgUrl: "/images/farjenasparken.png", id: 3 },
-  { name: "Historia", imgUrl: "/images/aftonstjarnan.jpg",id: 4 },
-  { name: "Vatten", imgUrl: "/images/lindholmsdockan.jpg", id: 5 },
+  { name: "Utsikt", imgUrl: "/images/locations/slottsberget.png", id: 1 },
+  { name: "Kultur", imgUrl: "/images/locations/konstverk.png", id: 2 },
+  { name: "Grönska", imgUrl: "/images/locations/farjenasparken.png", id: 3 },
+  { name: "Historia", imgUrl: "/images/locations/aftonstjarnan.png",id: 4 },
+  { name: "Vatten", imgUrl: "/images/locations/lindholmsdockan.png", id: 5 },
 ];
 
 function CategoryBox() {
