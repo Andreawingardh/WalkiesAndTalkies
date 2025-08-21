@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./InfoCard.module.css";
-import bgWave from "/src/assets/images/startwave.svg";
-import bgWaveSmall from "../../../src/assets/images/startwave-small.svg"
+import bgWave from "../../assets/images/startwave.svg";
+import bgWaveSmall from "../../assets/images/startwave-small.svg"
 
 function InfoCard({ showTitle }) {
   return (
