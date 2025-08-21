@@ -1,7 +1,7 @@
 .normal {
   /* Layout */
   width: 100%;
-  min-height: 35rem;
+  min-height: 34.5rem;
   align-items: center;
   justify-content: flex-end;
   flex-shrink: 0;
@@ -14,18 +14,18 @@
   position: relative;
   display: flex;
   position: relative;
-  background: url("../../src/assets/images/LocationCard-background.svg")
-    transparent 50% / cover no-repeat;
-  background-size: cover;
+  background-color:#D3DEF1;
+  padding-top: 1rem;
 }
 
 .locationContent {
-  width: 22.35rem;
-  height: 32rem;
   display: flex;
+  width: 25.125rem;
+  height: 34.0625rem;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 0.0625rem;
+  flex-shrink: 0;
 }
 
 h1 {
@@ -54,12 +54,12 @@ p {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 0.625rem;
 }
 
 .descriptionWrapper {
   display: flex;
-  height: 8.0625rem;
+  height: 5rem;
   padding: 0 0.625rem 0.625rem 0.625rem;
   justify-content: center;
   align-items: center;
@@ -71,10 +71,12 @@ p {
 
 .modalLink {
   display: flex;
-  padding: 0 0.625rem 0.625rem 0.625rem;
   justify-content: flex-end;
   align-items: center;
   gap: 0.625rem;
+  height: fit-content;
+  height: 1.06rem;
+  width: 100%;
 
   color: #000;
   font-family: Inter;
@@ -140,8 +142,17 @@ button {
 
 .descriptionBox {
   position: relative;
-  height: 50px;
+  height: 3rem;
   overflow: hidden;
+
+}
+
+.descriptionBox p {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .fadeOverlay {
