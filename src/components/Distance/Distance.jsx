@@ -61,7 +61,7 @@ export const calculateWalkingTime = async (
 // Main Distance component
 const Distance = ({ lat, lng }) => {
   const [walkingTime, setWalkingTime] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const calculateAndSetWalkingTime = async () => {
@@ -69,15 +69,18 @@ const Distance = ({ lat, lng }) => {
       setLoading(true);
       setError(null);
       
-      // Get user location
-      const userLocation = await getUserLocation();
-      console.log("start" + userLocation.lng);
-      console.log("end" + lng);
+      // Get stored location (should be ready from App.jsx)
+      const startLat = localStorage.getItem("startLocationLat");
+      const startLng = localStorage.getItem("startLocationLng");
       
-      // Calculate walking time
+      if (!startLat || !startLng) {
+        throw new Error("Platsdata inte tillgänglig");
+      }
+
+      // Calculate walking time (instant since location is ready!)
       const time = await calculateWalkingTime(
-        userLocation.lat,
-        userLocation.lng,
+        parseFloat(startLat),
+        parseFloat(startLng),
         lat,
         lng
       );
@@ -96,7 +99,7 @@ const Distance = ({ lat, lng }) => {
   }, [lat, lng]);
 
   if (loading) {
-    return <div>Calculating walking time...</div>;
+    return <div>Räknar ut promenadtid...</div>;
   }
 
   if (error) {
