@@ -13,9 +13,7 @@ function App() {
     const initializeApp = async () => {
       try {
         await getUserLocation();
-        console.log("Location ready!");
       } catch (error) {
-        console.error("Failed to get location:", error);
       } finally {
         await sleep(1500);  
         setShowStartPage(false);
@@ -24,11 +22,6 @@ function App() {
 
     initializeApp();
 
-    // const timer = setTimeout(() => {
-    //   setShowStartPage(false);
-    // }, 3000);
-
-    // return () => clearTimeout(timer);
   }, []);
 
   return <>{showStartPage ? <StartPage /> : <CategoryBox />}</>;

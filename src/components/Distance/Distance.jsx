@@ -22,14 +22,12 @@ export const getUserLocation = () => {
           resolve(location);
         },
         (error) => {
-          console.log("Error:", error.message);
           reject(error);
         },
         options  // Pass the options as the third parameter
       );
     } else {
       const error = new Error("Geolocation stöds inte");
-      console.log(error.message);
       reject(error);
     }
   });
@@ -53,7 +51,6 @@ export const calculateWalkingTime = async (
     const timeInMinutes = Math.round(timeInMilliseconds / 1000 / 60);
     return timeInMinutes;
   } catch (error) {
-    console.error("Fel när promenadtiden skulle räknas ut:", error);
     throw error;
   }
 };
@@ -87,8 +84,7 @@ const Distance = ({ lat, lng }) => {
       
       setWalkingTime(time);
     } catch (err) {
-      setError(err.message);
-      console.error("Error:", err);
+      setError("Gick inte att räkna ut promenadtid");
     } finally {
       setLoading(false);
     }
