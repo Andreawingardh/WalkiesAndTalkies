@@ -23,7 +23,7 @@ function CategoryBox() {
   const [disabledButton, setDisabledButton] = useState(false);
   const [currentLocation, setCurrentLocation] = useState("");
   const [locationArray, setLocationArray] = useState(locations);
-  const [currentCategory, setCurrentCategory] = useState();
+  const [currentCategory, setCurrentCategory] = useState("");
   const [locationErrorMessage, setLocationErrorMessage] = useState("");
 
   function handleClick(e) {
@@ -104,14 +104,17 @@ function CategoryBox() {
               {themes.map((theme) => (
                 <CategoryButton
                   onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentCategory(theme.name.toLowerCase());
+                  e.preventDefault();
+                  const clickedCategory = theme.name.toLowerCase();
+                    if (currentCategory === clickedCategory) {
+                      setCurrentCategory("");
+                    } else {
+                      setCurrentCategory(clickedCategory);
+                    }
                   }}
                   themeName={theme.name}
                   imgUrl={theme.imgUrl}
-                  isSelected={
-                    currentCategory === theme.name.toLocaleLowerCase()
-                  }
+                  isSelected={currentCategory === theme.name.toLocaleLowerCase()}
                   key={theme.id}
                 />
               ))}
