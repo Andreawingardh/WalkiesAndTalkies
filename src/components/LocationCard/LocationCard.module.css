@@ -122,15 +122,11 @@ button {
 }
 
 .modalButtonClose {
-  display: flex;
   padding: 0.375rem 0.9375rem; /* 6px 15px */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 0.625rem;
   border-radius: 1.25rem; /* 20px */
-  justify-self: flex-end;
   height: 2.5rem; /* 40px */
+  margin-left: auto;
 }
 
 .descriptionBox {
