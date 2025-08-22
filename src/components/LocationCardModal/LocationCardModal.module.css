@@ -22,6 +22,8 @@
   position: relative;
   max-width: 31.25rem; /* 500px */
   width: 90%;
+  max-height: 39.6875rem;
+  overflow-x: scroll;
 }
 
 .modalContent h1 {
@@ -41,7 +43,7 @@
 
   /* Brödtext popup */
   font-family: Inter;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem; /* 200% */
