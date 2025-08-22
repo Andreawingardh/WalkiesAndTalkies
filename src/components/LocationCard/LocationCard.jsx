@@ -17,10 +17,10 @@ function LocationCard({ location, resetClick, ...props }) {
           <h1>{location.name}</h1>
 
           <img src={location.image} />
-          <p>   <Distance
+          <div>   <Distance
             lat={location.coordinates.lat}
             lng={location.coordinates.lng}
-          ></Distance></p>
+          ></Distance></div>
           <div className={styles.descriptionWrapper}>
             <div className={styles.descriptionBox}>
               <div>{location.description}</div>
