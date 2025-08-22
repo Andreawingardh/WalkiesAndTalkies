@@ -1,6 +1,6 @@
 .normal {
   max-width: 100%;
- min-height: 34.5rem;
+  max-height: 34.5rem;
   align-items: center;
   flex-shrink: 0;
   line-height: normal;
@@ -11,6 +11,12 @@
   background-color: #d3def1;
   padding-top: 1rem;
   margin-top: auto;
+}
+
+@media screen and (min-height: 54rem) {
+  .normal {
+    min-height: 32rem; /* Slightly larger for bigger screens */
+  }
 }
 
 .locationContent {
